@@ -1,27 +1,105 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{
+  background-color: aliceblue;
+  font-family: 'Roboto', sans-serif;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.data_table{
+  
+  display: inline-block;
+  height: 100%;
+  width: 90%;
+  margin-top: 2rem;
+  margin-bottom: none;
+}
+
+.titulo{
+  border-top: 1rem;
+}
+
+.data{
+  
+  align-items: center;
+}
+
+.probemos{
+  display: flex;
+  height: 100vh;
+  position: relative;
+  gap: 2rem;
+}
+
+.sidebar{
+  width: 17rem;
+  height: 100%;
+  background-color: rgb(206, 206, 206);
+  padding: 1rem;
+  transition: all 0.3s linear;
+}
+
+.sidebar_top{
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1.5px solid rgb(0, 0, 0);
+  
+}
+
+.sidebar_logo{
+  width: 3.4rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.sidebar_list{
+  list-style: none;
+}
+
+.sidebar_link{
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+}
+
+.sidebar_link_dos{
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(2, 16, 119);
+  padding: 0.5rem 1rem;
+  display: flex;
+ background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+}
+
+.sidebar_icon{
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+.sidebar_name{
+  margin-left: 0.5rem;
+}
+
+.sidebar_logo_name{
+  font-size: 1.4rem;
+  font-weight: 800;
 }
